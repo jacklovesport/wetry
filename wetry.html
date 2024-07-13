@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <h1>Holiday Budget Calculator</h1>
+    <div>
+        <label for="totalDays">Total Days:</label>
+        <input type="number" id="totalDays" min="1">
+        <label for="initialBudget">Initial Budget ($):</label>
+        <input type="number" id="initialBudget" min="0">
+        <button onclick="initializeTrip()">Start Trip</button>
+    </div>
+    <div id="dailyUpdate" style="display:none;">
+        <h2>Update Daily Expense</h2>
+        <label for="currentDay">Current Day:</label>
+        <input type="number" id="currentDay" min="1">
+        <label for="spentToday">Spent Today ($):</label>
+        <input type="number" id="spentToday" min="0">
+        <button onclick="updateDay()">Update</button>
+    </div>
+    <p id="result"></p>
+    <table id="expenseTable" style="display:none;">
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Spent ($)</th>
+                <th>Remaining Budget ($)</th>
+                <th>New Avg/Day ($)</th>
+            </tr>
+        </thead>
+        <tbody id="expenseBody">
+        </tbody>
+    </table>
+
+    <script src="wetry.js"></script>
+</body>
+</html>
